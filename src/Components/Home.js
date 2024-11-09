@@ -3,6 +3,7 @@ import MainContainer from "./MainContainer";
 import Footer from "./Footer";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import UserDataFormContainer from "./UserDataFormContainer";
+import BookingConformation from "./BookingConformation";
 
 
 
@@ -18,6 +19,11 @@ const Home = () => {
             path :"/user",
             element:<UserDataFormContainer/>
 
+        },
+        {
+            path:"/booking",
+            element:<BookingConformation/>
+            
         }
     ])
    

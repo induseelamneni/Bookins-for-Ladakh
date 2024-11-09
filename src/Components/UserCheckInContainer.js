@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import {FaPlusCircle ,FaMinusCircle} from "react-icons/fa"
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-
+import { addUserStayingDates } from "./utils/userStayingDatesSlice";
 
 const UserCheckInContainer = () => {
     const [disable ,setDisable] = useState(true)
@@ -12,41 +12,21 @@ const UserCheckInContainer = () => {
     const [fromDate, setFromDate] = useState([])
     const [roomsCount , setRoomsCount] = useState(0)
 
-    const [toDateFormat , setToDateFormat] = useState("")
-    const [fromDateFormat , setFromDateFormat] = useState("")
     const dispatch = useDispatch()
     const navigate = useNavigate()
   
         const handleToDate = (e) => {
             const getToDateValue = e.target.value
-
-            const setDateFormate = getToDateValue.split("-")
-
-            const settoyear = setDateFormate[0]
-            const settomonth = setDateFormate[1]
-            const settodate = setDateFormate[2]
-
-            const settodateformt = settoyear+ "" + settomonth +"" +settodate 
-
             setToDate(getToDateValue)
-            setToDateFormat(settodateformt)
+          
             setDisable(false)
         }
 
         const handleFromDate = (e) => {
             
-            const getFromDateValue = e.target.value
-
-            const setdromformate = getFromDateValue.split("-")
-
-            const setfromyear = setdromformate[0]
-            const setfrommonth = setdromformate[1]
-            const setfromdate = setdromformate[2]
-
-            const setfromdateformat = setfromyear+ "" + setfrommonth +"" +setfromdate 
-            
+            const getFromDateValue = e.target.value            
             setFromDate(getFromDateValue)
-            setFromDateFormat(setfromdateformat)
+           
 
         }
 
@@ -54,12 +34,13 @@ const UserCheckInContainer = () => {
            e.preventDefault()
            
            
-           if(toDateFormat > fromDateFormat ){
+           if(toDate > fromDate ){
             alert("please select Valid Data")
            }else if(roomsCount <= 0){
 
             alert("please select Rooms")
            }
+           dispatch(addUserStayingDates({toDate:toDate, fromDate:fromDate, rooms:roomsCount}))
           
         }
 
@@ -73,7 +54,7 @@ const UserCheckInContainer = () => {
         }
 
         const onConformUser =() => {
-            if(toDateFormat && fromDateFormat && roomsCount){
+            if(toDate && fromDate && roomsCount){
                 navigate("/user")
             }
         }
@@ -86,7 +67,7 @@ const UserCheckInContainer = () => {
                 <div>
              <label className="text-xl font-mono">CHECK-IN</label>
              <br/>
-             <input type="date" name="todate" onChange={(e) => handleToDate(e)} placeholder={toDateFormat} className="mt-2"/>
+             <input type="date" name="todate" onChange={(e) => handleToDate(e)} className="mt-2"/>
              </div>
              <div>
              <label className="text-xl font-mono">CHECK-OUt</label>

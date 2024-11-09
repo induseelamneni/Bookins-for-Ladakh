@@ -1,8 +1,10 @@
 import {configureStore} from "@reduxjs/toolkit"
-import userReducer from "./userStayingDatesSlice"
+import userCheckinReducer from "./userStayingDatesSlice"
+import userReducer from "./userSlice"
 const appStore = configureStore({
     reducer:{
-        userStayingDates : userReducer
+        userStayingDates : userCheckinReducer,
+        user:userReducer
 
     }
 })
