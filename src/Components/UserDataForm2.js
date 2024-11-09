@@ -3,10 +3,11 @@ import "react-datepicker/dist/react-datepicker.css"
 import "bootstrap/dist/css/bootstrap.min.css"
 import {FaPlusCircle ,FaMinusCircle} from "react-icons/fa"
 import { useDispatch } from "react-redux";
+import { addUserStayingDates } from "./utils/userStayingDatesSlice";
 import { useNavigate } from "react-router-dom";
 
 
-const UserCheckInContainer = () => {
+const UserDataForm2 = () => {
     const [disable ,setDisable] = useState(true)
     const [toDate , setToDate] = useState([])
     const [fromDate, setFromDate] = useState([])
@@ -16,7 +17,12 @@ const UserCheckInContainer = () => {
     const [fromDateFormat , setFromDateFormat] = useState("")
     const dispatch = useDispatch()
     const navigate = useNavigate()
-  
+    const userStayingData = {
+        ToDate : toDateFormat,
+        FromDate : fromDateFormat,
+        NoOfRooms:roomsCount
+    }
+   
         const handleToDate = (e) => {
             const getToDateValue = e.target.value
 
@@ -34,7 +40,6 @@ const UserCheckInContainer = () => {
         }
 
         const handleFromDate = (e) => {
-            
             const getFromDateValue = e.target.value
 
             const setdromformate = getFromDateValue.split("-")
@@ -52,13 +57,8 @@ const UserCheckInContainer = () => {
 
         const handleSubmit = (e) => {
            e.preventDefault()
-           
-           
-           if(toDateFormat > fromDateFormat ){
+           if(toDateFormat > fromDateFormat){
             alert("please select Valid Data")
-           }else if(roomsCount <= 0){
-
-            alert("please select Rooms")
            }
           
         }
@@ -71,14 +71,6 @@ const UserCheckInContainer = () => {
             setRoomsCount(roomsCount -1 )
              }
         }
-
-        const onConformUser =() => {
-            if(toDateFormat && fromDateFormat && roomsCount){
-                navigate("/user")
-            }
-        }
-
-
         return (
             <div className="bg-[#FFFFFF]  ml-24 mb-24 p-6 z-40 flex flex-row justify-around w-10/12 absolute -bottom-[96px] shadow-lg align-middle">
            
@@ -106,7 +98,7 @@ const UserCheckInContainer = () => {
                 
              </div>
              <div>
-                <button onClick={onConformUser} className="bg-[#1e90ff] p-3 rounded-md ml-4 mr-4 text-white font-bold" disable={true}>Book</button>
+                <button type="submit" className="bg-[#1e90ff] p-3 rounded-md ml-4 mr-4 text-white font-bold">12500</button>
              </div>
              </form> 
          </div>
@@ -115,9 +107,4 @@ const UserCheckInContainer = () => {
         );
 }
 
-export default UserCheckInContainer
-
-// if(toDateFormat && fromDate  ){
-//     dispatch(addUserStayingDates({toDate:toDateFormat, fromDate:fromDateFormat, rooms:roomsCount}))
-//     navigate("/user")
-// }
+export default UserDataForm2

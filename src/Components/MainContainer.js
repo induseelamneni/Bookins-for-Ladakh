@@ -1,5 +1,6 @@
 import Discover from "./Discover";
 import UserCheckInContainer from "./UserCheckInContainer";
+import Services from "./Services";
 
 
 const MainContainer = () =>  {
@@ -17,9 +18,9 @@ const MainContainer = () =>  {
                 </div>
             </div>
             <UserCheckInContainer />
-            
             </div>
             <Discover/>
+            <Services />
             </>
         );
     

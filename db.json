@@ -1,0 +1,52 @@
+{
+   "Services" :  [
+        {
+            "id":1,
+            "serviceIcon":"http://www.w3.org/2000/svg",
+            "serviceTitle":"High Speed Internet",
+            "serviceDiscription":"Optical fiber connections provided in not only in your cabins but rather to all of the BriSphere scenic working spaces and dinning areas."
+        },
+        {
+            "id":2,
+            "serviceIcon":"http://www.w3.org/2000/svg",
+            "serviceTitle":"Healthy Meals",
+            "serviceDiscription":"A healthy breakfast and pleasant dinner will be serviced at your space every single day for your entire duration of stay with option of paid order within BriSphere."
+        },
+        {    "id":3,
+            "serviceIcon":"http://www.w3.org/2000/svg",
+            "serviceTitle":"Homely Stay",
+            "serviceDiscription":"Designed for working professionals with spacious interiors, comfortable beds and sleekly attached kitchen are some of the comforts providedin your space."
+        },
+        {     "id":4,
+            "serviceIcon":"http://www.w3.org/2000/svg",
+            "serviceTitle":"Transportation",
+            "serviceDiscription":"Optical fiber connections provided in not only in your cabins but rather to all of the BriSphere scenic working spaces and dinning areas."
+        },
+        {
+            "id":5,
+            "serviceIcon":"http://www.w3.org/2000/svg",
+            "serviceTitle":"Food Delivery",
+            "serviceDiscription":"Optical fiber connections provided in not only in your cabins but rather to all of the BriSphere scenic working spaces and dinning areas."
+        },
+        {    "id":6,
+            "serviceIcon":"http://www.w3.org/2000/svg",
+            "serviceTitle":"Tourism",
+            "serviceDiscription":"Optical fiber connections provided in not only in your cabins but rather to all of the BriSphere scenic working spaces and dinning areas."
+        },
+        {    "id":7,
+            "serviceIcon":"http://www.w3.org/2000/svg",
+            "serviceTitle":"Job",
+            "serviceDiscription":"Optical fiber connections provided in not only in your cabins but rather to all of the BriSphere scenic working spaces and dinning areas."
+        },
+        {    "id":8,
+            "serviceIcon":"http://www.w3.org/2000/svg",
+            "serviceTitle":"Rental Service",
+            "serviceDiscription":"Optical fiber connections provided in not only in your cabins but rather to all of the BriSphere scenic working spaces and dinning areas."
+        },
+        {    "id":9,
+            "serviceIcon":"http://www.w3.org/2000/svg",
+            "serviceTitle":"Online Shop",
+            "serviceDiscription":"Optical fiber connections provided in not only in your cabins but rather to all of the BriSphere scenic working spaces and dinning areas."
+        }
+    ]
+}
