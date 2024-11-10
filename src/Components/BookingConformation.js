@@ -4,7 +4,6 @@ import { useSelector } from 'react-redux';
 const BookingConformation = () =>  {
     const userCheckinData = useSelector(store => store.userStayingDates)
     const userdata = useSelector(store => store.user) 
-    console.log(userdata)
     
         return (
             <div className="relative">
@@ -23,8 +22,6 @@ const BookingConformation = () =>  {
                     <p>Contact Us</p>
                     </div>
                 </div>
-            
-               
             </div>
             <div className="bg-[#FFFFFF]  ml-24 mb-24 p-6 z-40 flex flex-row justify-around w-10/12 absolute -bottom-[96px] shadow-lg align-middle">
            
@@ -41,12 +38,9 @@ const BookingConformation = () =>  {
            </div>
            <div>
               <p className="text-xl font-mono mb-0"> Rooms</p>
-            
               <div className="flex flex-row ">
-             
               <p className="m-2">{userCheckinData?.rooms}</p>
               </div>
-              
            </div>
            <div>
               <button  className="bg-[#1e90ff] p-3 rounded-md ml-4 mr-4 text-white font-bold">12500 </button>
@@ -55,8 +49,6 @@ const BookingConformation = () =>  {
            </div> 
           </div>
             </div>
-           
-        
         );
 }
 

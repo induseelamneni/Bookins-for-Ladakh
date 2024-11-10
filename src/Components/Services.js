@@ -10,12 +10,12 @@ const Services = () =>  {
     },[])
 
     const getdata = async() => {
-    const data = await fetch("https://mocki.io/v1/01278744-54fa-409d-a7f0-af43800d7c6e")
+    const data = await fetch("https://mocki.io/v1/6befe9ee-32ec-4c70-b742-ea7dabe5c445")
     const response = await data.json()
     setServicesData(response?.Services)
     }
         return (
-            <div className="p-4 ">
+            <div className="p-4 " id="services">
             <h1 className='text-center'>Services</h1>
             <div className='flex flex-row flex-wrap align-middle justify-center'>
                 {servicesData.map((each) => (

@@ -19,14 +19,7 @@ const UserReviewCard = () =>  {
 
                         <p>{userReview.review}</p>
 
-
-                
-                    
-                
-
                 </div>
-                
-          
         );
 }
 

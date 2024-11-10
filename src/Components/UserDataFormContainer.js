@@ -37,7 +37,7 @@ const UserDataFormContainer = () =>  {
     
         return (
             <div className="relative">
-              <form className="p-8 m-8 align-content: center top-40 bg-gray-100 h-[440px] mb-10" onSubmit={onSubmitForm} > 
+              <form className="p-8 m-8 align-content: center justify-center top-40 bg-gray-100 h-[440px] mb-5" onSubmit={onSubmitForm} > 
                
                    <div className="flex flex-row">
                   <input type="text" className="p-4 m-4 w-1/2" placeholder="Please Enter Name" ref = {name}/>
@@ -53,9 +53,10 @@ const UserDataFormContainer = () =>  {
                   
                   </div>
                   <p className="text-red-500">{errMsg}</p>
+                  
                   </form>
 
-            <div className="bg-[#FFFFFF]  ml-24 mb-24 p-6 z-40 flex flex-row justify-around w-10/12 absolute -bottom-[96px] shadow-lg align-middle">
+            <div className="bg-[#FFFFFF]   ml-24 mb-24 p-3 z-40 flex flex-row justify-around w-10/12 absolute -bottom-[96px] shadow-lg align-middle">
            
              <div className="flex flex-row justify-around w-full align-middle" >
                 <div>
@@ -89,5 +90,3 @@ const UserDataFormContainer = () =>  {
     }
 
     export default UserDataFormContainer
-
-    //name.current.value,email.current.value,

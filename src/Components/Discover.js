@@ -1,10 +1,12 @@
 import React  from 'react';
 import UserReviewCard from './UserReviewCard';
+import { useRef } from 'react';
 
 const Discover =() => {
+    const section1 = useRef(null)
   
         return (
-            <div className="p-4 ">
+            <div className="p-4 " ref={section1} id="discover">
                 <h1 className='text-center mb-3'>Discover</h1>
                 <div className='flex flex-row align-middle justify-center'>
                 <UserReviewCard />

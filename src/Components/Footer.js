@@ -5,7 +5,7 @@ import { Location } from './utils/constants';
 const Footer =() => {
 
         return (
-            <div className="w-full bg-gray-300 p-4">
+            <div className="w-full bg-gray-300 p-4" id='aboutus'>
                 <h1 className='text-4xl font-bold'>Brisphere</h1>
                 {Location.map(each => (
                     <li className='list-none text-xl '>{each.title}</li>
